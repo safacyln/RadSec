@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Question
+from .models import Question, Sold_Product
 # Register your models here.
 
 
@@ -10,8 +10,6 @@ class RadiusAdmin(admin.ModelAdmin):
     list_filter = ["category"]
     search_fields = ["product"]
 
-    class Meta:
-        model = Question
-
 
 admin.site.register(Question, RadiusAdmin)
+admin.site.register(Sold_Product)
